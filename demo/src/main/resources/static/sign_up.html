@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="main.css"> 
+</head>
+<body>
+    <section class="login-form">
+        <h1>회원가입</h1>
+        <form action="/register" method="post">
+            <div class="int-area">
+                <input type="text" name="username" id="username" autocomplete="off" required>
+                <label for="username">User Name</label>
+            </div>
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">ID</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">Password</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw_confirm" id="pw_confirm" autocomplete="off" required>
+                <label for="pw_confirm">Confirm Password</label>
+            </div>
+            <div class="int-area">
+                <input type="text" name="phone" id="phone" autocomplete="off" required>
+                <label for="phone">Phone Number</label>
+            </div>
+            <div class="int-area email-container">
+                <input type="email" name="email" id="email" autocomplete="off" required pattern="[a-zA-Z0-9._%+-]+@hallym.ac.kr">
+                <label for="email">University Email (@hallym.ac.kr)</label>
+                <button type="button" class="send-code-btn" onclick="sendVerificationCode()">코드 전송</button>
+            </div>
+            
+            <div class="int-area">
+                <input type="text" name="email_code" id="email_code" autocomplete="off" required>
+                <label for="email_code">Email Verification Code</label>
+            </div>
+            
+            <div class="btn-area">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="caption">
+            <a href="index.html">Back to Login</a>
+        </div>
+    </section>
+    <script src="signup.js"></script>
+</body>
+</html>
