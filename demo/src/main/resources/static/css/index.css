@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid black; */
+}
+body{
+    background-color: bisque;
+    color: black;
+}
+
+.container{
+    width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-content: center;
+    padding: 1.2rem 0;
+}
+header>p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+header>ul{
+    display: flex;
+}
+header>ul>li{
+    list-style-type: none;
+    margin-left: 1.5rem;
+}
+header>ul>li>a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-bottom: 5px;
+}
+header>ul>li:first-child>a{
+    border-bottom: 5px solid black;
+}
+header>ul>li>a:hover{
+    border-bottom: 5px solid gray;
+}
+@media screen and (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+}
+section{
+    padding: 0 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+section>p{
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+section>p:first-child{
+    font-size: 2rem;
+    font-weight: 900;
+}
+section>p:last-of-type{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+section>a{
+    display: block;
+    border: 1px solid black;
+    width: 150px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* 🔹 전체 중앙 정렬 */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 화면 중앙 배치 */
+}
+
+/* 🔹 중앙 배너 컨테이너 */
+.image-section {
+    display: block; /* flex 대신 block 사용 */
+    width: 100vw; /* 뷰포트 너비를 초과하지 않도록 설정 */
+    max-width: 700px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 가운데 정렬 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+    text-align: center; /* 이미지 가운데 정렬 */
+}
+
+/* 🔹 첫 번째 섹션만 보이도록 설정 */
+.image-section:first-of-type {
+    display: flex;
+}
+
+/* 🔹 이미지 스타일 */
+.image-section img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block; /* inline-block 요소로 인한 공백 제거 */
+}
+
+/* 🔹 중앙 글 */
+.text-container {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* 🔹 버튼 중앙 정렬 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.button-container a {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: white;
+}
+
+
+
+
+footer{
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+footer>a{
+    text-decoration: none;
+}

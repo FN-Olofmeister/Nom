@@ -3,51 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내것두</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <section class="login-form">
-        <h1>내것두</h1>
-        <form action="">
-            <div class="int-area">
-                <input type="text" name="id" id="id" autocomplete="off" required>
-                <label for="id">USER NAME</label>
+    <div class="container">
+        <header>
+            <p>Cover</p>
+            <ul>
+                <li><a href="#"></a>first</li>
+                <li><a href="#"></a>second</li>
+                <li><a href="#"></a>third</li>
+                <li><a href="login.html">로그인/회원가입</a></li>
+            </ul>
+        </header>
+        
+        <section class="image-section">
+            <img src="img/banner-1050629_1280.jpg" alt="배너 이미지 1">
+        </section>
+        <section class="image-section">
+            <img src="img/banner-1058142_1280.jpg" alt="배너 이미지 2">
+        </section>
+        <section class="image-section">
+            <img src="img/banner-1557881_1280.jpg" alt="배너 이미지 3">
+        </section>
+        
+        <section class="content-section">  <!-- 🔹 콘텐츠(중앙 글 + 버튼) -->
+            <div class="text-container">
+                <p>중앙 글</p>
             </div>
-            <div class="int-area">
-                <input type="password" name="pw" id="pw" autocomplete="off" required>
-                <label for="pw">PASSWORD</label>
+        
+            <div class="button-container">
+                <a href="#">오더하기</a>
+                <a href="#">배달하기</a>
             </div>
-            <div class="btn-area">
-                <button type="submit">LOGIN</button>
-            </div>
-        </form>
-        <div class="caption">
-            <a href="">Forgot Password?</a>
-            <a href="sign_up.html">Create Account</a>
-        </div>
-    </section>
-    <script src="jquery-3.4.1.js"></script>
-    <script>
-        let id = $('#id');
-        let pw = $('#pw');
-        let btn = $('#btn');
+        </section>
+        
+        <footer>
 
-        $(btn).on('click', function(){
-            if(($id).val() == ""){
-                $(id).next('label').addClass('warning');
-                setTimeout(function(){
-                    $('label').removeClass('warning');
-                },1500);
-            }
-            else if($(pw).val() == ""){
-                $(pw).next('label').addClass('warning');
-                setTimeout(function(){
-                    $('label').removeClass('warning');
-                },1500);
-            }
-        }); 
-
-    </script>
+        </footer>
+    </div>
+    <script src="javascript/index.js"></script>
 </body>
 </html>
