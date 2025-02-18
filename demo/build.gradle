@@ -1,28 +1,50 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.4.2'
-	id 'io.spring.dependency-management' version '1.1.7'
+    id 'java'
+    id 'org.springframework.boot' version '3.4.2'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(23)
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Spring Boot Starter Web (웹 애플리케이션용)
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Boot Starter Data JPA (JPA 사용을 위한 의존성)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Spring Boot Starter Security (BCryptPasswordEncoder 사용을 위한 의존성)
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Spring Mail 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    // MySQL Driver (MySQL 연결을 위한 드라이버)
+    implementation 'mysql:mysql-connector-java:8.0.30'  // 버전 추가
+
+    // Jakarta Persistence API (JPA 사용을 위한 API)
+    implementation 'jakarta.persistence:jakarta.persistence-api'
+
+    // 테스트용 의존성
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    //lombok 의존성
+    implementation 'org.projectlombok:lombok:1.18.30' // 최신 버전 사용
+    annotationProcessor 'org.projectlombok:lombok:1.18.30' // 최신 버전 사용
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
