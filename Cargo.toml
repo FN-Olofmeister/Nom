@@ -1,0 +1,10 @@
+[package]
+name = "test_api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.9.0"
+burn = "0.16.0"
+burn-tensor = "0.16.0"
+burn-ndarray = "0.16.0"
